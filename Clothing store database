@@ -1,0 +1,25 @@
+--create a clothing store inventory database
+
+CREATE TABLE store_inventory (id INTEGER PRIMARY KEY, name TEXT, color TEXT, price REAL, quantity INTEGER);
+
+INSERT INTO store_inventory VALUES (1,"Shirt","Yellow",7,3);
+INSERT INTO store_inventory VALUES (2,"T-shirt", "White",4.50,3);
+INSERT INTO store_inventory VALUES (3,"Tank","White",4,5);
+INSERT INTO store_inventory VALUES (4,"Skirt","Blue",6,2);
+INSERT INTO store_inventory VALUES (5,"Shorts","Pink",5.50,4);
+INSERT INTO store_inventory VALUES (6,"Pants","Black",8,1);
+INSERT INTO store_inventory VALUES (7,"Hat","Brown",6,2);
+INSERT INTO store_inventory VALUES (8,"Sunglasses","gold",4,3);
+INSERT INTO store_inventory VALUES (9,"Shoes","Brown",12,4);
+INSERT INTO store_inventory VALUES (10,"Sandals","Purple",7,3);
+INSERT INTO store_inventory VALUES (11,"Earrings","Silver",8.25,3);
+INSERT INTO store_inventory VALUES (12,"Skort","Brown",6,1);
+INSERT INTO store_inventory VALUES (13,"Necklace","Silver",7.25,5);
+INSERT INTO store_inventory VALUES (14,"Bracelet","Black",4.75,2);
+INSERT INTO store_inventory VALUES (15,"Ring","Gold",9,3);
+
+--display inventory items that had more than 3 items ordered by price
+SELECT* FROM store_inventory WHERE quantity >3 ORDER BY price;
+
+--What's the total price of all my inventory items?
+SELECT SUM(price) FROM store_inventory;
